@@ -7,8 +7,7 @@ export function attachRoutes (app) {
         console.log(`username is ${req.body.username}`);
         console.log(`password is ${req.body.password}`);
         const token = jwt.sign({username: req.body.username}, process.env.secret);
-        res.cookie('pictaphone', token);
-        res.end();
+        res.json({token});
       })
 
 }

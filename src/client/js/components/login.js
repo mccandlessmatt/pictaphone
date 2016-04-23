@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import store from 'store'
 
 export default React.createClass({
   login({username, password}){
@@ -7,10 +8,10 @@ export default React.createClass({
     axios.post('/login', {
       username,
       password
-    }).then(resp => this.saveLogin(resp))
+    }).then(resp => this.saveLogin(resp.data))
   },
-  saveLogin(resp){
-    console.log('the response: ', resp);
+  saveLogin({token}){
+    store.set('token', token);
   },
   render(){
     return (

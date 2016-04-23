@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 export default props => (
   <div>
     <header>
       <h1>Pictaphone</h1>
       <nav>
+        <Link to="/test">Test</Link>
       </nav>
     </header>
     {props.children}

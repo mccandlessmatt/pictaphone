@@ -3,6 +3,9 @@ import axios from 'axios'
 import store from 'store'
 
 export default React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object
+  },
   login({username, password}){
     console.log(`password is ${password}, username is ${username}`);
     axios.post('/login', {
@@ -12,8 +15,12 @@ export default React.createClass({
   },
   saveLogin({token}){
     store.set('token', token);
+    this.context.router.replace('/test');
   },
   render(){
+    console.log('the props', this.props);
+    console.log('the context', this.context);
+    console.log('the component', this);
     return (
       <form>
         <label htmlFor="username">Username</label><br />

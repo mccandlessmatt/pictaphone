@@ -20113,6 +20113,10 @@
 
 	exports.default = _react2.default.createClass({
 	  displayName: 'login',
+
+	  contextTypes: {
+	    router: _react2.default.PropTypes.object
+	  },
 	  login: function login(_ref) {
 	    var _this = this;
 
@@ -20131,10 +20135,14 @@
 	    var token = _ref2.token;
 
 	    _store2.default.set('token', token);
+	    this.context.router.replace('/test');
 	  },
 	  render: function render() {
 	    var _this2 = this;
 
+	    console.log('the props', this.props);
+	    console.log('the context', this.context);
+	    console.log('the component', this);
 	    return _react2.default.createElement(
 	      'form',
 	      null,

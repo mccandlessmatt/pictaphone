@@ -18,9 +18,6 @@ export default React.createClass({
     this.context.router.replace('/test');
   },
   render(){
-    console.log('the props', this.props);
-    console.log('the context', this.context);
-    console.log('the component', this);
     return (
       <form>
         <label htmlFor="username">Username</label><br />

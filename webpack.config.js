@@ -3,8 +3,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 	entry: './src/client/js/main.js',
 	output: {
-		path: './dist',
+		path: '/dist',
 		filename: 'pictaphone.js',
+		publicPath: '/dist/'
 	},
 	module: {
 		loaders: [
@@ -38,5 +39,5 @@ module.exports = {
 	},
 	plugins: [
     new ExtractTextPlugin("pictaphone.css")
- 	]
+	]
 }

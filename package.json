@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "webpack",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "webpack-dev-server --progress --inline | node app.js"
   },
   "author": "Matt McCandless",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-middleware": "^1.6.1"
   }
 }

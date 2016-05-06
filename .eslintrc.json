@@ -2,5 +2,16 @@
     "extends": "airbnb",
     "plugins": [
         "react"
-    ]
+    ],
+    "rules": {
+      "comma-dangle": ["error", "never"],
+      "react/prefer-es6-class": "off",
+      "no-unused-vars": ["error", {"args": "none"}],
+      "react/prop-types": "warn",
+      "react/jsx-first-prop-new-line": "off",
+      "react/jsx-curly-spacing": "off",
+      "react/jsx-closing-bracket-location": "off",
+      "indent": "warn",
+      "no-shadow": "warn"
+    }
 }

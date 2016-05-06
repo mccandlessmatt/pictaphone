@@ -1,26 +1,26 @@
-import React from 'react'
-import Login from './login'
-import Layout from './layout/desktop'
-import Test from './test'
-import { Provider } from 'react-redux'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-import store from 'store'
+import React from 'react';
+import Login from './login';
+import Layout from './layout/desktop';
+import Test from './test';
+import { Provider } from 'react-redux';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import store from 'store';
 
-function checkAuth (nextState, replace) {
-  if (!store.get('token')){
+function checkAuth(nextState, replace) {
+  if (!store.get('token')) {
     replace({
       pathname: '/login',
       state: { nextPathname: nextState.location.pathname }
-    })
+    });
   }
 }
 
-function logout (nextState, replace) {
+function logout(nextState, replace) {
   store.remove('token');
   checkAuth(nextState, replace);
 }
 
-export default ({store}) => (
+export default ({ store }) => (
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/login" component={Login} />

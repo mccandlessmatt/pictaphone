@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React from 'react';
+import { Link } from 'react-router';
 
 export default props => (
   <div>
@@ -14,4 +14,4 @@ export default props => (
       <p><em>This is the footer</em></p>
     </footer>
   </div>
-)
+);

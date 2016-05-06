@@ -15,7 +15,7 @@ export default React.createClass({
   },
   saveLogin({token}){
     store.set('token', token);
-    this.context.router.replace('/test');
+    this.context.router.replace('/');
   },
   render(){
     return (

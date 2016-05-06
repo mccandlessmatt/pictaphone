@@ -6,7 +6,7 @@ export default props => (
     <header>
       <h1>Pictaphone</h1>
       <nav>
-        <Link to="/test">Test</Link>
+        <Link to="/logout">Logout</Link>
       </nav>
     </header>
     {props.children}

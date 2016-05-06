@@ -9,19 +9,24 @@ import store from 'store'
 function checkAuth (nextState, replace) {
   if (!store.get('token')){
     replace({
-      pathname: '/',
+      pathname: '/login',
       state: { nextPathname: nextState.location.pathname }
     })
   }
 }
 
+function logout (nextState, replace) {
+  store.remove('token');
+  checkAuth(nextState, replace);
+}
 
 export default ({store}) => (
   <Provider store={store}>
     <Router history={browserHistory}>
+      <Route path="/login" component={Login} />
+      <Route path="/logout" onEnter={logout} />
       <Route path="/" component={Layout}>
-        <IndexRoute component={Login} />
-        <Route path="test" component={Test} onEnter={checkAuth} />
+        <IndexRoute component={Test} onEnter={checkAuth} />
       </Route>
     </Router>
   </Provider>

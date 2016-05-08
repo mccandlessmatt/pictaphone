@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default props => (
-  <p>congratulations you are logged in</p>
+  <p>This is the create game page</p>
 );

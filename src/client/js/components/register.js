@@ -8,7 +8,7 @@ function register({ name, email, password }) {
 }
 
 export default React.createClass({
-  render(){
+  render() {
     return (
       <form>
         <label htmlFor="name">Name</label><br />
@@ -28,6 +28,6 @@ export default React.createClass({
             });
         }}>Register</button>
       </form>
-    )
+    );
   }
 });

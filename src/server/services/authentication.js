@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken';
+import Users from '../schemas/users';
 
 function login(req, res) {
   console.log(`username is ${req.body.username}`);
@@ -8,10 +9,15 @@ function login(req, res) {
 }
 
 function register(req, res) {
-  console.log(`name is ${req.body.name}`);
-  console.log(`password is ${req.body.password}`);
-  console.log(`email is ${req.body.email}`);
-  res.send('success');
+  const { name, password, email } = req.body;
+  
+  new Users({ name, password, email }).save((err, user) => {
+    if (err) {
+      res.send('error');
+    }
+
+    res.send(user);
+  });
 }
 
 export default {

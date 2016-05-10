@@ -8,8 +8,15 @@ import fallback from 'express-history-api-fallback';
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackConfig from '../../webpack.config';
+import mongoose from 'mongoose';
 
 dotenv.config();
+
+mongoose.connect(process.env.dbConnection);
+mongoose.connection.once('open', () => {
+  console.log(`connected to database at ${process.env.dbConnection}`);
+});
+
 const app = express();
 const root = `${process.cwd()}/dist`;
 

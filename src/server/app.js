@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(webpackMiddleware(webpack(webpackConfig)));
 app.use(express.static(`${process.cwd()}/dist`));
-app.use(expressJWT({ secret: process.env.secret }).unless({ path: ['/login'] }));
+app.use(expressJWT({ secret: process.env.secret })
+  .unless({ path: ['/login', '/register'] }));
 
 attachRoutes(app);
 

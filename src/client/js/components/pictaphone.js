@@ -8,8 +8,7 @@ import store from 'store';
 import CreateGame from './create-game';
 import Archives from './archives';
 import Profile from './profile';
-
-console.log('the archives', Archives);
+import Register from './register';
 
 function checkAuth(nextState, replace) {
   if (!store.get('token')) {
@@ -29,6 +28,7 @@ export default ({ store }) => (
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/login" component={Login} />
+      <Route path="/register" component={ Register } />
       <Route path="/logout" onEnter={logout} />
       <Route path="/" component={Layout} onEnter={checkAuth} >
         <IndexRoute component={Home} />

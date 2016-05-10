@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import store from 'store';
+import { Link } from 'react-router';
 
 export default React.createClass({
   contextTypes: {
@@ -32,6 +33,10 @@ export default React.createClass({
               password: this.refs.password.value
             });
         }}>Login</button>
+
+        <hr />
+        <p><Link to="/register">Register</Link></p>
+        <p><Link to="/forgot-password">Forgot Password</Link></p>
       </form>
     );
   }

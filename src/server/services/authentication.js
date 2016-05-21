@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import Users from '../schemas/users';
+import credential from 'credential';
 
 function login(req, res) {
   console.log(`username is ${req.body.username}`);
@@ -8,15 +9,25 @@ function login(req, res) {
   res.json({ token });
 }
 
-function register(req, res) {
-  const { name, password, email } = req.body;
-  
-  new Users({ name, password, email }).save((err, user) => {
+function saveUser(userData, res) {
+  console.log('saving hash', typeof userData.hash);
+  new Users(userData).save((err, user) => {
     if (err) {
       res.send('error');
     }
-
     res.send(user);
+  });
+}
+
+function register(req, res) {
+  const { name, password, email } = req.body;
+
+  credential().hash(password, (err, hash) => {
+    if (err) {
+      res.send('error');
+    } else {
+      saveUser({ name, email, password: hash }, res);
+    }
   });
 }
 

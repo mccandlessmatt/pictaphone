@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import Users from '../schemas/users';
+import Users from '../schemas/user';
 import credential from 'credential';
 
 const pw = credential();

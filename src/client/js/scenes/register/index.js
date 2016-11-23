@@ -12,19 +12,19 @@ export default React.createClass({
     return (
       <form>
         <label htmlFor="name">Name</label><br />
-        <input id="name" type="text" ref="name" /><br />
+        <input id="name" type="text" ref={name => this.name = name} /><br />
 
         <label htmlFor="email">Email</label><br />
-        <input id="email" type="text" ref="email" /><br />
+        <input id="email" type="text" ref={email => this.email = email} /><br />
 
         <label htmlFor="password">Password</label><br />
-        <input id="password" type="password" ref="password" /><br />
+        <input id="password" type="password" ref={password => this.password = password} /><br />
         <button onClick={ e => {
             e.preventDefault();
             register({
-              name: this.refs.name.value,
-              email: this.refs.email.value,
-              password: this.refs.password.value
+              name: this.name.value,
+              email: this.email.value,
+              password: this.password.value
             });
         }}>Register</button>
       </form>

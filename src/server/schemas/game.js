@@ -7,4 +7,4 @@ const gameSchema = new Schema({
   pictures: [{ type: Schema.Types.ObjectId, ref: 'Picture' }]
 });
 
-export default mongoose.model('Game', userSchema);
+export default mongoose.model('Game', gameSchema);

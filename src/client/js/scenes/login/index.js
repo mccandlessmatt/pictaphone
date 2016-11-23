@@ -22,15 +22,15 @@ export default React.createClass({
     return (
       <form>
         <label htmlFor="username">Username</label><br />
-        <input type="text" id="username" ref="username" /><br />
+        <input type="text" id="username" ref={username => this.username = username} /><br />
 
         <label htmlFor="password">Password</label><br />
-        <input type="password" id="password" ref="password" /><br />
+        <input type="password" id="password" ref={password => this.password = password} /><br />
         <button onClick={ e => {
             e.preventDefault();
             this.login({
-              username: this.refs.username.value,
-              password: this.refs.password.value
+              username: this.username.value,
+              password: this.password.value
             });
         }}>Login</button>
 

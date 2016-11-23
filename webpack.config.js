@@ -1,3 +1,4 @@
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -35,7 +36,15 @@ module.exports = {
 		]
   },
 	resolve: {
-    extensions: ['', '.js', '.sass']
+    extensions: ['', '.js', '.sass'],
+    alias: {
+      actions: path.resolve(__dirname, 'src/client/js/actions'),
+      actionCreators: path.resolve(__dirname, 'src/client/js/action-creators'),
+      constants: path.resolve(__dirname, 'src/client/js/constants'),
+      scenes: path.resolve(__dirname, 'src/client/js/scenes'),
+      shared: path.resolve(__dirname, 'src/client/js/shared'),
+      reducers: path.resolve(__dirname, 'src/client/js/reducers')
+    }
 	},
 	plugins: [
     new ExtractTextPlugin("pictaphone.css")

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Pictaphone from './components/pictaphone';
 import { createStore } from 'redux';
+
+import Pictaphone from './pictaphone';
 
 const pictaphoneNode = document.getElementById('pictaphone');
 const store = createStore((state, action) => state, {});

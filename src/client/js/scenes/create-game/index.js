@@ -1,5 +1,5 @@
 import React from 'react';
-import UserList from 'shared/components/userList';
+import UserList from 'components/userList';
 
 export default React.createClass({
   contextTypes: {

@@ -40,10 +40,11 @@ module.exports = {
     alias: {
       actions: path.resolve(__dirname, 'src/client/js/actions'),
       actionCreators: path.resolve(__dirname, 'src/client/js/action-creators'),
+      components: path.resolve(__dirname, 'src/client/js/components'),
       constants: path.resolve(__dirname, 'src/client/js/constants'),
       scenes: path.resolve(__dirname, 'src/client/js/scenes'),
-      shared: path.resolve(__dirname, 'src/client/js/shared'),
-      reducers: path.resolve(__dirname, 'src/client/js/reducers')
+      reducers: path.resolve(__dirname, 'src/client/js/reducers'),
+      utils: path.resolve(__dirname, 'src/client/js/utils')
     }
 	},
 	plugins: [

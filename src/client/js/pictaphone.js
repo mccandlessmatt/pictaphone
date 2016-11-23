@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from 'scenes/login/index.js';
-import Layout from 'shared/components/layout/desktop';
+import Layout from 'components/layout/desktop';
 import Home from 'scenes/landing';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';

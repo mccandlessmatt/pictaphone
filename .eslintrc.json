@@ -30,6 +30,7 @@
     "no-shadow": "warn",
     "no-return-assign": "off",
     "arrow-parens": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": "off"
   }
 }

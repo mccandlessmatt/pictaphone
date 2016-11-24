@@ -1,15 +1,15 @@
 import { createReducer } from 'utils/reducerUtils';
-import * as actions from 'actions/gameActions';
+import * as actions from 'actions/friendActions';
 
 const initialState = {
-  players: []
+  friends: []
 };
 
 const actionHandlers = {
-  [actions.ADD_PLAYER](state, action) {
+  [actions.ADD_FRIEND](state, action) {
     return {
       ...state,
-      players: [...state.players, action.payload]
+      friends: [...state.friends, action.payload]
     };
   }
 };

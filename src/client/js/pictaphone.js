@@ -5,7 +5,7 @@ import Home from 'scenes/landing';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import store from 'store';
-import CreateGame from 'scenes/create-game';
+import CreateGame from 'containers/CreateGameContainer';
 import Archives from 'scenes/archives';
 import Profile from 'scenes/profile';
 import Register from 'scenes/register';

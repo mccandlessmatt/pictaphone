@@ -1,1 +1,1 @@
-export const PLAYER_ADDED = 'PLAYER_ADDED';
+export const ADD_PLAYER = 'ADD_PLAYER';

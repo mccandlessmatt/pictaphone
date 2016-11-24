@@ -39,9 +39,10 @@ module.exports = {
     extensions: ['', '.js', '.sass'],
     alias: {
       actions: path.resolve(__dirname, 'src/client/js/actions'),
-      actionCreators: path.resolve(__dirname, 'src/client/js/action-creators'),
+      actionCreators: path.resolve(__dirname, 'src/client/js/actionCreators'),
       components: path.resolve(__dirname, 'src/client/js/components'),
       constants: path.resolve(__dirname, 'src/client/js/constants'),
+      containers: path.resolve(__dirname, 'src/client/js/containers'),
       scenes: path.resolve(__dirname, 'src/client/js/scenes'),
       reducers: path.resolve(__dirname, 'src/client/js/reducers'),
       utils: path.resolve(__dirname, 'src/client/js/utils')

@@ -1,3 +1,4 @@
 import friends from './friends';
+import words from './words';
 
-export default { friends };
+export default { friends, words };

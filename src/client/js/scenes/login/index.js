@@ -19,6 +19,9 @@ export default React.createClass({
     this.context.router.replace('/');
   },
   render() {
+    console.log('inside login', process.env.AUTH0_DOMAIN);
+    console.log('node env', process.env.NODE_ENV);
+    console.log('testing', testing); // eslint-disable-line no-undef
     return (
       <form>
         <label htmlFor="username">Username</label><br />

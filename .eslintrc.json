@@ -31,6 +31,7 @@
     "no-return-assign": "off",
     "arrow-parens": "off",
     "import/prefer-default-export": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "eol-last": "off"
   }
 }

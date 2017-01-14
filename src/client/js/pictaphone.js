@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from 'scenes/login/index.js';
+import Login from 'scenes/login/login2.js';
 import Layout from 'components/layout/desktop';
 import Home from 'scenes/landing';
 import { Provider } from 'react-redux';
@@ -12,12 +12,14 @@ import Register from 'scenes/register';
 import Game from 'scenes/game';
 
 function checkAuth(nextState, replace) {
+  /*
   if (!store.get('token')) {
     replace({
       pathname: '/login',
       state: { nextPathname: nextState.location.pathname }
     });
   }
+  */
 }
 
 function logout(nextState, replace) {

@@ -5,7 +5,7 @@ export default friend => (
   <li>
     <span>{friend.name}</span>
     <DropdownButton title="Actions" bsSize="small">
-      <MenuItem onSelect={() => console.log(`adding ${friend.name}`)}>Invite to game</MenuItem>
+      <MenuItem onSelect={() => friend.invitePlayer(friend)}>Invite to game</MenuItem>
     </DropdownButton>
   </li>
 );
